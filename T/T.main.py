@@ -1,17 +1,14 @@
-# tilek_ai_bot.py
 import telebot
 import requests
+import os
 
 # =========================
-# TELEGRAM BOT TOKEN
+# ENV VARIABLES (КОПСУЗ)
 # =========================
-BOT_TOKEN = "8542143817:AAGrHFfSt9AzvmAPP8EwTvlbp3oLmDDtTG8"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
 bot = telebot.TeleBot(BOT_TOKEN)
-
-# =========================
-# OPENROUTER API KEY
-# =========================
-OPENROUTER_API_KEY = "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"
 
 # =========================
 # SYSTEM PROMPT
@@ -37,17 +34,17 @@ def answer(message):
             headers={
                 "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                 "Content-Type": "application/json",
-                "HTTP-Referer": "https://t.me/tilek_ai_bot",  # каалаган ссылка
+                "HTTP-Referer": "https://t.me/tilek_ai_bot",
                 "X-Title": "Tilek AI Bot"
             },
             json={
-                "model": "openai/gpt-4o-mini",  # же башка модель
+                "model": "openai/gpt-4o-mini",
                 "messages": [
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": user_text}
                 ],
                 "temperature": 0.8,
-                "max_tokens": 1000
+                "max_tokens": 800
             },
             timeout=60
         )
@@ -60,10 +57,12 @@ def answer(message):
             reply = f"API жооп бербеди: {data}"
 
     except Exception as e:
-        reply = f"Кечиресиз, техникалык көйгөй чыкты.\n{e}"
+        reply = f"Кечиресиз, техникалык көйгөй чыкты.\n{str(e)}"
 
     bot.reply_to(message, reply)
 
-
-print("🔥 ТИЛЕК AI (OpenRouter) ИШТЕП ЖАТАТ!")
+# =========================
+# START BOT
+# =========================
+print("🤖 Tilek AI Bot иштеп баштады...")
 bot.infinity_polling()
