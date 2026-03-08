@@ -1,0 +1,14 @@
+
+"МЕНИН СУПЭР СТАРТАБЫМ" "ТИЛЕК АЛДАШОВ" 🚀 TILEK AI Telegram ичиндеги супер AI платформа 💬 Chat AI 🎥 Видео генерация 🪉 Музыка генерация 🖼 Сүрөт 🔊 Үн синтези 📄 Документ анализ 💎 Premium + VIP система 🎁 Referral өсүү механизми 🧠 Концепция TILEK AI — бул жөн гана Telegram бот эмес. Бул — масштабдуу AI платформа. Free → Plus → Pro → VIP Монетизация + масштаб + бренд personality. 😎 Tilek Personality Engine Ар колдонуучуда стиль айланат: 😎 Күлкүлүү 😈 Бир аз катуу 🧠 Серьёзный Жооп структурасы: 📌 Негизги жооп 💡 Кеңеш 🔥 Мотивация Бул ботту башка боттордон айырмалап турат. 💎 Пландар 🆓 FREE Күнүнө 10 суроо 6 саат блок Upsell механика 💎 PLUS — $12 / ай 750 чат 3 видео 3 музыка 15 сүрөт 5 үн 5 документ 30 күндө reset 🔴 PRO — $28 / ай 1500 чат 6 видео 3 музыка 30 сүрөт 15 үн 15 документ Priority queue 🎥 VIP Пакеттер Айлык лимитке кирбейт. 🎥 VIP VIDEO 1 видео 3 видео 5 видео 🪉 VIP MUSIC 1 минута 3 минута 5 минута VIP — кошумча кредит болуп сакталат. 🎁 Referral система Колдонуучу өзүнүн ссылкасын алат: Копировать код
+
+t.me/bot?start=USER_ID Эреже: PLUS сатып алса → реферерге $3 баланс $5+ төлөсө → 7 күн PLUS Withdraw ≥ $20 Бул органикалык өсүүнүн мотору. 🏗 Архитектура
+
+tilek_ai/ ← Бул менин проекттим root папкам менин
+
+├── app/ ← Негизги папка (коддун баары ушунда) │ ├── init.py │ ├── main.py │ ├── config.py │ ├── db.py │ ├── models.py │ ├── constants.py │ ├── keyboards.py │ ├── style_engine.py │ ├── middleware.py │ ├── scheduler.py │ ├── utils.py │ │ │ ├── handlers/ │ │ ├── init.py │ │ ├── menu_router.py │ │ ├── start.py │ │ ├── menu.py │ │ ├── chat.py │ │ ├── premium.py │ │ ├── vip.py │ │ ├── referral.py │ │ ├── support.py │ │ ├── history.py │ │ └── admin.py │ │ │ ├── services/ │ │ ├── init.py │ │ ├── grok.py │ │ ├── cryptomus.py │ │ └── media/ │ │ ├── init.py │ │ ├── kling.py │ │ ├── runway.py │ │ ├── elevenlabs.py │ │ └── suno.py │ │ │ └── data/ │ ├── init.py │ ├── countries.py │ └── texts.py │ ├── requirements.txt └── README.md
+
+⚙️ Технологиялар Python 3.11 aiogram 3 FastAPI PostgreSQL SQLAlchemy Async Cryptomus API Grok / OpenAI API Render deployment 🚀 Render Deploy Start Command: Копировать код
+
+uvicorn app.main:app --host 0.0.0.0 --port 10000 Environment Variables: Копировать код
+
+BOT_TOKEN= DATABASE_URL= GROK_API_KEY= CRYPTOMUS_API_KEY= CRYPTOMUS_MERCHANT_ID= PUBLIC_BASE_URL= REQUIRED_CHANNEL= 🔄 Scheduler System Ар 60 секунд сайын: FREE daily reset Block expired check Premium expiry Monthly refill 🔐 Коопсуздук Channel subscription gate Flood control Limit protection Payment signature verification Duplicate webhook protection 📈 Масштаб планы TikTok контент Telegram канал Referral boost VIP limited slots AI медиа реклама 🎯 DONE Criteria Бот даяр деп эсептелет эгер: /start → иштейт Channel gate → иштейт FREE лимит → иштейт Premium төлөм → автомат актив Webhook → иштейт VIP кредит → иштейт Referral → иштейт 👑 TILEK AI Кыргыз AI дос. Күлкүлүү. Катуу. Акылдуу. Системалуу. Масштабдуу. Стартап.
